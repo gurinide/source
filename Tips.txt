@@ -1,0 +1,37 @@
+[Excel関連]
+
+エクセルの今日の日付を入力する方法。Ctrl + ; キーで今日の日付を、Ctrl + : で今の時間を入力できます。
+
+［Alt］＋［F4］	アクティブな項目を閉じる、またはアクティブなアプリを終了する
+
+［Shift］＋［Del］	選択した項目をごみ箱に移動せずに削除する
+
+［Ctrl］＋［Shift］＋［Esc］	タスクマネジャーを開く
+
+［Ctrl］＋［Shift］＋［N］	新しいフォルダを作成する
+
+
+[Excel] 複数シート（作業グループ）をPDF化すると分割されてしまう場合の対処法
+
+各々のシートのページ設定の「印刷品質」が異なるのが原因
+
+対処法その１：ページ設定を一括変更(VBA)
+
+上記をVBA化したもの。念のための掲載。
+
+Sub Set600DPI()
+    ' *** 選択シートのDPIを600dpiに統一する ***
+    Dim SelShts As Object
+    For Each SelShts In ActiveWindow.SelectedSheets
+        SelShts.PageSetup.PrintQuality = 600
+    Next Sht
+End Sub
+
+
+[SQL関連]
+
+AS		検索結果の列名を別名で表示する
+ORDER BY	レコードを並び替える
+DESC		降順
+ASC		昇順
+LEFT [OUTER] JOIN	ON　左外部結合
